@@ -29,3 +29,9 @@ one command at a time.
 
 You will need to delete the data in the cascade_dir first and change the numPos and numNeg input 
 to `opencv_traincascade` if you add new samples. 
+
+Example Python Code
+-------------------
+
+![Demo Image](demo.png)
+If you have OpenCV installed you can run the Python sample code using `python ./detect.py <path_to_video>`
