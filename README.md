@@ -4,6 +4,8 @@ OpenCV Dashcam Car Detection
 This repository contains a Haar classifier trained specifically to recognize the 
 rear ends of cars, along with the entire data set used to train it.
 
+![Demo Image](demo.png)
+
 Classifier Training Data
 ------------------------
 
@@ -18,7 +20,7 @@ using the `opencv_annotation` tool (stored in annotations.txt).
 A `.vec` file of samples was then created (24x24 sample size) using the `opencv_createsamples` 
 tool.
 
-The Haar cascade was then trained to an acceptanceRatioBreakValue of 1.0e-5.
+The Haar cascade was then trained to an `acceptanceRatioBreakValue` of 1.0e-5.
 
 Retraining the Classifier
 -------------------------
@@ -27,11 +29,10 @@ If you would like to train your own classifier using this data set, you can foll
 outlined in `training_steps.sh`. I would not recommend simply running that script, instead run
 one command at a time. 
 
-You will need to delete the data in the cascade_dir first and change the numPos and numNeg input 
+You will need to delete the data in the `cascade_dir` first and change the numPos and numNeg input 
 to `opencv_traincascade` if you add new samples. 
 
 Example Python Code
 -------------------
 
-![Demo Image](demo.png)
-If you have OpenCV installed you can run the Python sample code using `python ./detect.py <path_to_video>`
+If you have OpenCV installed you can run the Python sample code using `python ./detect.py <path_to_video.mp4>`
